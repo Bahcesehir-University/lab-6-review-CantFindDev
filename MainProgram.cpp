@@ -124,7 +124,7 @@ public:
     // TODO 5b: Less-than operator (<)
     // Compare by GPA (lower GPA = "less than")
     bool operator<(const Student& other) const {
-        return gpa <  other.getGpa();
+        return gpa < other.getGpa();
     }
 
     // TODO 5c: Stream insertion operator (<<)

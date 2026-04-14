@@ -55,9 +55,9 @@ public:
     // TODO 1c: Copy constructor
     // Create a deep copy of another Student object
     Student(const Student& other) {
-        name = other.getName();
-        id = other.getId();
-        gpa = other.getGpa();
+        name = other.name;
+        id = other.id;
+        gpa = other.gpa;
     }
 
     // TODO 1d: Destructor
@@ -124,7 +124,7 @@ public:
     // TODO 5b: Less-than operator (<)
     // Compare by GPA (lower GPA = "less than")
     bool operator<(const Student& other) const {
-        return other.getGpa() < other.getGpa();
+        return  other.getGpa() <gpa;
     }
 
     // TODO 5c: Stream insertion operator (<<)

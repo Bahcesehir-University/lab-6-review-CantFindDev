@@ -55,9 +55,9 @@ public:
     // TODO 1c: Copy constructor
     // Create a deep copy of another Student object
     Student(const Student& other) {
-        name = other.name;
-        id = other.id;
-        gpa = other.gpa;
+        name = other.getName();
+        id = other.getId();
+        gpa = other.getGpa();
     }
 
     // TODO 1d: Destructor
@@ -118,20 +118,20 @@ public:
     // TODO 5a: Equality operator (==)
     // Two students are equal if they have the same id
     bool operator==(const Student& other) const {
-        return id == other.id;
+        return id == other.getId();
     }
 
     // TODO 5b: Less-than operator (<)
     // Compare by GPA (lower GPA = "less than")
     bool operator<(const Student& other) const {
-        return other.gpa < gpa;
+        return other.getGpa() < other.getGpa();
     }
 
     // TODO 5c: Stream insertion operator (<<)
     // Format: "Student(name, ID: id, GPA: gpa)"
     // Example: "Student(Ali, ID: 101, GPA: 3.5)"
     friend ostream& operator<<(ostream& os, const Student& s) {
-        os <<"Student("<< s.name <<" ID: "<< s.id <<" GPA: " << s.gpa<<")";
+        os <<"Student("<< s.getName()<<", ID: "<< s.getId() <<", GPA: " << s.getGpa()<<")";
         return os;
     }
 };
